@@ -1,0 +1,31 @@
+{
+  "controlPanelForm": {
+    "interval": {
+      "label": "Timer, ms",
+      "validation": {
+        "required": "Required field"
+      }
+    },
+    "dataSize": {
+      "label": "Array size",
+      "validation": {
+        "required": "Required field"
+      }
+    },
+    "additionalIds": {
+      "label": "Additional array ids",
+      "validation": {
+        "pattern": "Only words separated by commas are allowed"
+      }
+    }
+  },
+  "dataTable": {
+    "column": {
+      "id": "id",
+      "int": "int",
+      "float": "float",
+      "color": "color",
+      "child": "child"
+    }
+  }
+}

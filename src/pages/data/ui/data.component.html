@@ -1,0 +1,6 @@
+<app-control-panel
+  (intervalChange)="onIntervalChange($event)"
+  (dataSizeChange)="onDataSizeChange($event)"
+  (additionalIdsChange)="onUpdateAdditionalIds($event)"
+></app-control-panel>
+<app-data-table [data]="(data$ | async) || []"></app-data-table>

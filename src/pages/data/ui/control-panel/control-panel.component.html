@@ -1,0 +1,59 @@
+<form
+  [formGroup]="controlPanelForm"
+  class="control-panel-form"
+>
+  <div class="control-panel-form__field">
+    <label
+      class="control-panel-form__field-label"
+      for="intervalInput"
+    >{{ 'controlPanelForm.interval.label' | translate }}</label>
+    <input
+      class="control-panel-form__field-input"
+      formControlName="interval"
+      id="intervalInput"
+      type="number"
+    >
+    <div class="control-panel-form__field-validation-messages">
+      <div *ngFor="let message of getValidationMessage('interval')" class="control-panel-form__field-validation-message">
+        {{ message | translate }}
+      </div>
+    </div>
+  </div>
+
+  <div class="control-panel-form__field">
+    <label
+      class="control-panel-form__field-label"
+      for="dataSizeInput"
+    >{{ 'controlPanelForm.dataSize.label' | translate }}</label>
+    <input
+      formControlName="dataSize"
+      class="control-panel-form__field-input"
+      id="dataSizeInput"
+      type="number"
+    >
+    <div class="control-panel-form__field-validation-messages">
+      <div *ngFor="let message of getValidationMessage('dataSize')" class="control-panel-form__field-validation-message">
+        {{ message | translate }}
+      </div>
+    </div>
+  </div>
+
+  <div class="control-panel-form__field">
+    <label
+      class="control-panel-form__field-label"
+      for="additionalIdsInput"
+    >{{ 'controlPanelForm.additionalIds.label' | translate }}</label>
+    <input
+      placeholder="abc, 123, abc123"
+      formControlName="additionalIds"
+      class="control-panel-form__field-input"
+      id="additionalIdsInput"
+      type="text"
+    >
+    <div class="control-panel-form__field-validation-messages">
+      <div *ngFor="let message of getValidationMessage('additionalIds')" class="control-panel-form__field-validation-message">
+        {{ message | translate }}
+      </div>
+    </div>
+  </div>
+</form>
